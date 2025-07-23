@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribly - Privacy Choices</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0B4BD5, #1E88E5);
+            border-radius: 20px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        h1 {
+            color: #0B4BD5;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .privacy-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .privacy-section h2 {
+            color: #0B4BD5;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .data-control {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 4px solid #0B4BD5;
+        }
+        
+        .control-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f0f7ff;
+            border-radius: 8px;
+        }
+        
+        .control-method .icon {
+            width: 40px;
+            height: 40px;
+            background: #0B4BD5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .control-method a {
+            color: #0B4BD5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .control-method a:hover {
+            text-decoration: underline;
+        }
+        
+        .data-type {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+        }
+        
+        .data-type h3 {
+            color: #0B4BD5;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .data-description {
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        .data-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: #0B4BD5;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f1f3f4;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .important-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1rem;
+            border-radius: 8px;
+            color: #856404;
+            margin: 1rem 0;
+        }
+        
+        .contact-info {
+            background: #e8f5e8;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            color: #2e7d32;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            color: #999;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .privacy-section {
+                padding: 1.5rem;
+            }
+            
+            .data-controls {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">T</div>
+            <h1>Privacy Choices</h1>
+            <p class="tagline">Manage your data and privacy settings on Tribly</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>🔐 Your Data Control Options</h2>
+            <p>At Tribly, you have full control over your personal data. Use the options below to view, modify, or delete your information.</p>
+            
+            <div class="control-method">
+                <div class="icon">📱</div>
+                <div>
+                    <strong>In-App Settings</strong><br>
+                    Open the Tribly app → Settings → Privacy & Data<br>
+                    <em>Manage most data preferences directly in the app</em>
+                </div>
+            </div>
+            
+            <div class="control-method">
+                <div class="icon">📧</div>
+                <div>
+                    <strong>Email Request</strong><br>
+                    <a href="mailto:privacy@tribly.us?subject=Data Privacy Request">privacy@tribly.us</a><br>
+                    <em>Send specific requests for data access, modification, or deletion</em>
+                </div>
+            </div>
+            
+            <div class="control-method">
+                <div class="icon">🆘</div>
+                <div>
+                    <strong>General Support</strong><br>
+                    <a href="mailto:support@tribly.us?subject=Privacy Question">support@tribly.us</a><br>
+                    <em>General privacy questions and assistance</em>
+                </div>
+            </div>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>📊 Data We Collect & Your Choices</h2>
+            
+            <div class="data-type">
+                <h3>🏷️ Profile Information</h3>
+                <div class="data-description">Name, email, bio, interests, profile photo</div>
+                <div class="data-controls">
+                    <a href="#" class="btn btn-primary" onclick="showAppMessage()">Edit in App</a>
+                    <a href="mailto:privacy@tribly.us?subject=Profile Data Request&body=I would like to request changes to my profile data." class="btn btn-secondary">Email Request</a>
+                </div>
+            </div>
+            
+            <div class="data-type">
+                <h3>💬 Messages & Posts</h3>
+                <div class="data-description">Your messages, posts, comments, and social interactions</div>
+                <div class="data-controls">
+                    <a href="#" class="btn btn-primary" onclick="showAppMessage()">Manage in App</a>
+                    <a href="mailto:privacy@tribly.us?subject=Content Data Request&body=I would like to manage my messages and posts." class="btn btn-secondary">Email Request</a>
+                </div>
+            </div>
+            
+            <div class="data-type">
+                <h3>📸 Photos & Media</h3>
+                <div class="data-description">Images and files you've shared in messages or posts</div>
+                <div class="data-controls">
+                    <a href="#" class="btn btn-primary" onclick="showAppMessage()">Delete in App</a>
+                    <a href="mailto:privacy@tribly.us?subject=Media Data Request&body=I would like to request deletion of my photos and media." class="btn btn-secondary">Email Request</a>
+                </div>
+            </div>
+            
+            <div class="data-type">
+                <h3>🔗 Social Connections</h3>
+                <div class="data-description">Your friends, study group memberships, and campus connections</div>
+                <div class="data-controls">
+                    <a href="#" class="btn btn-primary" onclick="showAppMessage()">Manage in App</a>
+                    <a href="mailto:privacy@tribly.us?subject=Social Data Request&body=I would like to manage my social connections." class="btn btn-secondary">Email Request</a>
+                </div>
+            </div>
+            
+            <div class="data-type">
+                <h3>📈 Usage Data</h3>
+                <div class="data-description">App usage patterns, feature interactions, and analytics</div>
+                <div class="data-controls">
+                    <a href="mailto:privacy@tribly.us?subject=Usage Data Request&body=I would like to opt out of usage analytics." class="btn btn-secondary">Opt Out</a>
+                    <a href="mailto:privacy@tribly.us?subject=Usage Data Access&body=I would like to access my usage data." class="btn btn-secondary">Request Data</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>🗑️ Account Deletion</h2>
+            <p>If you want to permanently delete your Tribly account and all associated data:</p>
+            
+            <div class="important-notice">
+                <strong>⚠️ Important:</strong> Account deletion is permanent and cannot be undone. All your messages, posts, connections, and data will be permanently removed.
+            </div>
+            
+            <div class="control-method">
+                <div class="icon">🗑️</div>
+                <div>
+                    <strong>Delete Account</strong><br>
+                    <a href="mailto:privacy@tribly.us?subject=Account Deletion Request&body=I would like to permanently delete my Tribly account and all associated data. I understand this action cannot be undone.%0A%0AAccount Email: [Your Email]%0AAccount Name: [Your Name]%0AReason (optional): [Reason for deletion]">Request Account Deletion</a><br>
+                    <em>We'll process your request within 30 days</em>
+                </div>
+            </div>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>📋 Data Access Requests</h2>
+            <p>You have the right to know what data we have about you. Request a complete copy of your data:</p>
+            
+            <div class="control-method">
+                <div class="icon">📄</div>
+                <div>
+                    <strong>Download Your Data</strong><br>
+                    <a href="mailto:privacy@tribly.us?subject=Data Access Request&body=I would like to request a complete copy of all data associated with my account.%0A%0AAccount Email: [Your Email]%0AAccount Name: [Your Name]%0APreferred Format: JSON/PDF">Request Data Export</a><br>
+                    <em>We'll provide your data within 30 days</em>
+                </div>
+            </div>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>⏱️ Response Times</h2>
+            <ul style="margin-left: 2rem; color: #555;">
+                <li><strong>Simple requests:</strong> 1-3 business days</li>
+                <li><strong>Data access requests:</strong> Up to 30 days</li>
+                <li><strong>Account deletion:</strong> Up to 30 days</li>
+                <li><strong>Complex requests:</strong> We'll contact you with timeline</li>
+            </ul>
+            
+            <div class="contact-info">
+                📧 Questions? Contact us at <a href="mailto:privacy@tribly.us" style="color: #2e7d32;">privacy@tribly.us</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 Hakeem Shitta-Bey. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                <a href="mailto:support@tribly.us" style="color: #999;">Support</a> | 
+                <a href="mailto:privacy@tribly.us" style="color: #999;">Privacy</a> | 
+                <a href="#" style="color: #999;">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function showAppMessage() {
+            alert('This action is performed within the Tribly mobile app. Please open the app and go to Settings → Privacy & Data to manage this information.');
+        }
+    </script>
+</body>
+</html> 
