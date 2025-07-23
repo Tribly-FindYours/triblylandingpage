@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribly - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0B4BD5, #1E88E5);
+            border-radius: 20px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        h1 {
+            color: #0B4BD5;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .support-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .support-section h2 {
+            color: #0B4BD5;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 4px solid #0B4BD5;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f0f7ff;
+            border-radius: 8px;
+        }
+        
+        .contact-method .icon {
+            width: 40px;
+            height: 40px;
+            background: #0B4BD5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .contact-method a {
+            color: #0B4BD5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-method a:hover {
+            text-decoration: underline;
+        }
+        
+        .faq-item {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #0B4BD5;
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-answer {
+            color: #555;
+        }
+        
+        .response-time {
+            background: #e8f5e8;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            color: #2e7d32;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            color: #999;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .support-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">T</div>
+            <h1>Tribly Support</h1>
+            <p class="tagline">Connect with classmates, find study groups, discover campus events</p>
+        </div>
+        
+        <div class="support-section">
+            <h2>📧 Contact Us</h2>
+            <p>Having issues with Tribly? We're here to help! Reach out to us using any of the methods below:</p>
+            
+            <div class="contact-method">
+                <div class="icon">✉️</div>
+                <div>
+                    <strong>Email Support</strong><br>
+                    <a href="mailto:triblyfindyours@gmail.com">triblyfindyours@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="response-time">
+                ⏰ We typically respond within 24-48 hours
+            </div>
+        </div>
+        
+        <div class="support-section">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I create an account?</div>
+                <div class="faq-answer">Download Tribly from the App Store and sign up with your college email address (.edu). You'll need to verify your email to start connecting with classmates.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">I'm not receiving the verification email</div>
+                <div class="faq-answer">Check your spam/junk folder first. If you still don't see it, make sure you're using a valid .edu email address and contact our support team.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I join a study group?</div>
+                <div class="faq-answer">Browse study groups in the Groups section, or search for your specific class. Tap "Join" to request access to any group that interests you.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I use Tribly if I'm not a college student?</div>
+                <div class="faq-answer">Tribly is designed exclusively for college students with .edu email addresses. This helps maintain our campus-focused community.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I report inappropriate content?</div>
+                <div class="faq-answer">Use the report button on any post or message, or contact our support team directly. We take community safety seriously and investigate all reports promptly.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">The app is crashing or won't load</div>
+                <div class="faq-answer">Try force-closing and reopening the app. If issues persist, restart your device or contact support with your device model and iOS version.</div>
+            </div>
+        </div>
+        
+        <div class="support-section">
+            <h2>🛠️ Technical Issues</h2>
+            <p>When reporting technical issues, please include:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem; color: #555;">
+                <li>Your device model (iPhone 12, iPhone 15 Pro, etc.)</li>
+                <li>iOS version you're running</li>
+                <li>Tribly app version</li>
+                <li>Description of what you were doing when the issue occurred</li>
+                <li>Screenshots if applicable</li>
+            </ul>
+        </div>
+        
+        <div class="support-section">
+            <h2>🎓 About Tribly</h2>
+            <p>Tribly is a social networking platform designed exclusively for college students. We help you connect with classmates, form study groups, discover campus events, and build meaningful relationships that enhance your academic journey.</p>
+            
+            <p style="margin-top: 1rem;">Our mission is to transform the college experience by making it easier to find your academic community and create lasting connections.</p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 Hakeem Shitta-Bey. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Tribly - Connecting college students worldwide
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
